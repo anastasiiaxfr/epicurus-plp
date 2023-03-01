@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>News on itg - Главная</title>
+    <link>/ru/news/</link>
+    <description>Recent content in News on itg - Главная</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru</language>
+    <lastBuildDate>Mon, 11 Oct 2021 21:00:00 +0000</lastBuildDate><atom:link href="/ru/news/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ITG запускает трейдинговый канал с индикаторами совместно с Игорем Порохом </title>
+      <link>/ru/news/news4/</link>
+      <pubDate>Mon, 11 Oct 2021 21:00:00 +0000</pubDate>
+      
+      <guid>/ru/news/news4/</guid>
+      <description>Инвестиционная компания International Trade Group (ITG) создает новый совместный с Игорем Порохом проект — трейдинговый канал. Что примечательно, канал будет также оснащен индикаторами, которые помогут эффективно ориентироваться в котировках и своевременно реагировать на изменения рынка.
+Напомним, что ITG представляет собой уже сложившегося надежного партнера инвесторов, управляя большим количеством портфелей криптовалюты и обеспечивая стабильно высокий заработок клиентам.</description>
+    </item>
+    
+    <item>
+      <title>International Trade Group начинает активное сотрудничество с Ассоциацией банков Украины</title>
+      <link>/ru/news/news3/</link>
+      <pubDate>Mon, 14 Oct 2019 13:39:07 +0600</pubDate>
+      
+      <guid>/ru/news/news3/</guid>
+      <description>Компания International Trade Group за 3 года своей деятельности заключила… Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi numquam architecto nesciunt est consectetur veniam harum iste. Nobis, et nisi? Fuga voluptatem velit eum quibusdam ex architecto quia autem, officia accusantium, cupiditate deserunt odio tenetur! Ad architecto expedita, deleniti quam dolorem corrupti atque!</description>
+    </item>
+    
+  </channel>
+</rss>

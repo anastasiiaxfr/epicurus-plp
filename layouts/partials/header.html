@@ -1,0 +1,71 @@
+<header>
+	<nav class="navbar navbar-expand-lg">
+		<div class="container">
+			
+			{{ .Scratch.Set "img" .Site.Params.logo }}
+			{{ .Scratch.Set "logo_h" "24" }}
+			{{- partial "_logo.html" . -}}
+
+			<div class="collapse navbar-collapse order-1" id="navbarSupportedContent">
+				<div class="navbar-menu">
+					<div class="d-inline-flex d-lg-none">
+						{{- partial "_lang.html" . -}}
+					</div>
+
+					<ul class="navbar-nav ms-auto">
+						{{ range .Site.Menus.header }}
+						{{ if .HasChildren }}
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="{{ .URL | relLangURL  }}" id="navbarDropdown"
+								role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								{{ .Name }}
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								{{ range .Children }}
+								<li><a class="dropdown-item" href="{{ .URL | relLangURL  }}">{{ .Name }}</a></li>
+								{{ end }}
+							</ul>
+						</li>
+						{{ else }}
+						<li class="nav-item">
+							<a class="nav-link px-0" aria-current="page" href="{{ .URL | relLangURL  }}">{{ .Name }}</a>
+						</li>
+						{{ end }}
+						{{ end }}
+
+					</ul>
+
+					<div class="d-flex">
+
+						<div class="d-none d-lg-flex">
+							{{- partial "_btn-auth.html" . -}}
+							{{- partial "_lang.html" . -}}
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="navbar__btn-group order-12 order-lg-1">
+
+				<div class="d-flex d-lg-none">
+					{{- partial "_btn-auth.html" . -}}
+
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
+
+						<svg class="navbar-toggler-open" width="40" height="40">
+							<use xlink:href="#menu"></use>
+						</svg>
+						<svg class="navbar-toggler-close" width="40" height="40">
+							<use xlink:href="#close"></use>
+						</svg>
+					</button>
+
+				</div>
+
+			</div>
+
+		</div>
+	</nav>
+</header>

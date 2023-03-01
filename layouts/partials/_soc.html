@@ -1,0 +1,16 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+<div class="soc__wrap">
+    {{ range .Site.Params.social }}
+    {{ if ne .soc "false" }}
+    <a href="{{ .link | safeURL }}" target="_blank" rel="noopener noreferrer" class="soc">
+        <svg class="icon" width="30" height="30">
+            <use xlink:href="#{{ .icon_sm }}"></use>
+        </svg>
+    </a>
+    {{ end }}
+    {{ end }}
+
+</div>
+
+

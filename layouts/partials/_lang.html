@@ -1,0 +1,54 @@
+<!-- BEGIN lang-switcher -->
+{{ if .IsTranslated }}
+
+<nav class="dropdown lang-switcher">
+  {{ $siteLanguages := .Site.Languages}}
+  {{ $pageLang := .Page.Lang}}
+
+  <button class="btn--grey dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+    aria-expanded="false">
+
+    {{ range $siteLanguages }}
+    {{ if eq $pageLang .Lang}}
+    <svg class="icon me-2" width="25" height="25">
+      <use xlink:href="#lang"></use>
+    </svg>
+    {{ .LanguageName }}
+    {{ end }}
+    {{ end }}
+
+  </button>
+
+
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+    {{ range .Page.AllTranslations }}
+    {{ $translation := .}}
+    {{ range $siteLanguages }}
+    {{ if eq $translation.Lang .Lang }}
+    {{ $selected := false }}
+    {{ if eq $pageLang .Lang}}
+
+    <li>
+      <button class="" id="{{ $translation.Language }}" value="{{ $translation.Permalink }}"
+        onClick="location = this.value;">{{ .LanguageName }}</button>
+    </li>
+
+    {{ else }}
+    <li>
+      <button class="" id="{{ $translation.Language }}" value="{{ $translation.Permalink }}"
+        onClick="location = this.value;">
+        {{ .LanguageName }}
+      </button>
+    </li>
+
+    {{ end }}
+    {{ end }}
+    {{ end }}
+    {{ end }}
+  </ul>
+
+</nav>
+
+{{ end }}
+<!-- END lang-switcher -->

@@ -1,0 +1,39 @@
+{{ define "main" }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.homepage }}
+<style>
+</style>
+{{ end }}
+
+
+{{ "<!-- Hero Section -->" | safeHTML }}
+{{ "<!-- End of Hero Section -->" | safeHTML }}
+
+<article class="hero__wrap">
+    <div class="hero__bg">
+        <img src="{{ `images/bg3.svg` | relURL }}" alt="ALT" width="100" height="100">
+        <img src="{{ `images/bg4.svg` | relURL }}" alt="ALT" width="402" height="402">
+    </div>
+    {{- partial "header.html" . -}}
+
+    {{- partial "_hero.html" . -}}
+</article>
+
+<!-- BEGIN section -->
+{{- partial "_home-sec-1.html" . -}}
+<!-- END section -->
+
+<!-- BEGIN section -->
+{{- partial "_home-sec-2.html" . -}}
+<!-- END section -->
+
+<!-- BEGIN section -->
+{{- partial "_subscribe.html" . -}}
+<!-- END section -->
+
+<!-- BEGIN section -->
+{{- partial "_socials.html" . -}}
+<!-- END section -->
+
+{{ end }}

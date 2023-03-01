@@ -1,0 +1,30 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.homepage.hero }}
+{{ with $data.homepage.hero }}
+
+<section class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-7 col-lg-10 mx-auto text-center">
+
+                <h1>
+                    {{ .title }}
+                </h1>
+
+                <p class="text__sub">
+                    {{ .sub_title }}
+                </p>
+                {{ if .btn.enable }}
+                <a href="{{ .btn.link }}" class="btn">
+                    {{ .btn.label }}
+                </a>
+                {{ end }}
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ end }}
+{{ end }}

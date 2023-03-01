@@ -1,0 +1,275 @@
+baseURL = "/"
+# canonifyURLs = true
+defaultContentLanguage = "en"
+disableLanguages = []
+paginate = "6"
+relativeURLs = true
+summaryLength = "50"
+title = "Epicurus - Главная"
+# [Languages.en]
+# contentDir = "content/en"
+# home = "Home"
+# languageCode = "en-us"
+# languageName = "En"
+# weight = 3
+[Languages.ru]
+contentDir = "content/ru"
+home = "Главная"
+languageCode = "ru"
+languageName = "Ру"
+weight = 2
+[Languages.ua]
+contentDir = "content/ua"
+home = "Головна"
+languageCode = "ua"
+languageName = "Укр"
+weight = 3
+[Languages.en]
+contentDir = "content/en"
+home = "Home"
+languageCode = "en"
+languageName = "ENG"
+weight = 1
+
+# [Languages.ua.params.form]
+# action = "#"
+# enable = true
+# method = "POST"
+
+# [[Languages.ua.params.form.field]]
+# enable = true
+# name = "name"
+# placeholder = "**\\*** Ім`я"
+# required = ""
+# type = "text"
+
+# [[Languages.ua.params.form.field]]
+# enable = true
+# name = "tel"
+# placeholder = "+38 (0__) ___ - __ - __"
+# label = "Телефон"
+# required = ""
+# type = "tel"
+
+# [[Languages.ua.params.form.field]]
+# enable = true
+# placeholder = "Надіслати"
+# type = "submit"
+
+
+[[menu.header]]
+URL = "#explore"
+name = "Explore"
+weight = 1
+[[menu.header]]
+URL = "#solutions"
+name = "Products"
+weight = 2
+[[menu.header]]
+URL = "#roadmap"
+name = "Roadmap"
+weight = 3
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+[sitemap]
+ChangeFreq = "daily"
+Priority = 0.6
+Weight = [["main", "1"], ["sub2", "0.8"], ["sub3", "0.6"]]
+enableRobotsTXT = true
+
+[params]
+CIO_site_id = "XXX"
+GTM = "GTM-WHBQ3BV"
+develop = "Anastasiia_Berest"
+
+logo = "images/logo.svg"
+logo_dark = "images/logo.svg"
+logo_w = "116"
+
+site_name = "epicurus"
+site_url = "epicurus.com"
+
+
+[[params.plugins.js]]
+link = "plugins/js/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/js/bootstrap.bundle.min.js"
+
+
+[params.preloader]
+enable = true
+preloader = ""
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+
+
+############################# socials #################################
+[[params.social]]
+label = "tm"
+title = "Telegram"
+link = "https://t.me/ITG_club"
+icon = "telegram" 
+icon_h = "telegram-h"
+icon_sm = "tm"
+
+[[params.social]]
+label = "ytb"
+title = "YouTube"
+link = "https://www.youtube.com/channel/UC4Blz7CAtrKwTL8mYt6LpfA"
+icon = "youtube" 
+icon_h = "youtube-h"
+icon_sm = "ytb"
+
+[[params.social]]
+label = "tw"
+title = "Twitter"
+link = "https://twitter.com/ITG_General_"
+icon = "twitter" 
+icon_h = "twitter-h"
+icon_sm = "tw"
+
+[[params.social]]
+label = "ln"
+title = "LinledIn"
+link = "https://www.linkedin.com/in/international-trade-group"
+icon = "linkedin" 
+icon_h = "linkedin-h"
+icon_sm = "ln"
+soc = "false"
+
+[[params.social]]
+label = "tk"
+title = "Tik-tok"
+link = "http://www.tiktok.com/@itg_general__"
+icon = "tiktok" 
+icon_h = "tiktok-h"
+icon_sm = "tk"
+
+[[params.social]]
+label = "rd"
+title = "Reddit"
+link = "#"
+icon = "reddit" 
+icon_h = "reddit-h"
+icon_sm = "rd"
+soc = "false"
+
+[[params.social]]
+label = "im"
+title = "Instagram"
+link = "https://www.instagram.com/itg_official__/"
+icon_sm = "im"
+
+[[params.social]]
+label = "tn"
+title = "Tradingview"
+link = "https://ru.tradingview.com/u/ITG_company"
+icon_sm = "tn"
+
+[[params.social]]
+label = "fb"
+title = "Facebook"
+link = "https://www.facebook.com/InternationalTradeGroup2018"
+icon_sm = "fb"
+
+[[params.social]]
+label = "email"
+title = "Email"
+link = "mailto:office@itg-investments.com"
+icon_sm = "email"
+
+############################# footer #################################
+[params.footer]
+    copyright = "© 2023 ITG Foundation. All rights reserved"
+
+[[menu.footer]]
+name = "Company"
+weight = 1
+identifier = "company"
+hasChildren = true 
+    [[menu.footer]]
+    parent = "company"
+    name = "About us"
+    URL = "#"
+    weight = 1
+    [[menu.footer]]
+    parent = "company"
+    name = "Careers"
+    URL = "#"
+    weight = 2
+    [[menu.footer]]
+    parent = "company"
+    name = "Our Brand"
+    URL = "#"
+    weight = 3
+
+[[menu.footer]]
+name = "For studying"
+weight = 2
+identifier = "studying"
+hasChildren = true
+    
+    [[menu.footer]]
+    parent = "studying"
+    name = "Roadmap"
+    URL = "#"
+    weight = 1
+    [[menu.footer]]
+    parent = "studying"
+    name = "Our Brands"
+    URL = "#"
+    weight = 2
+
+[[menu.footer]]
+name = "Products"
+weight = 3
+identifier = "products"
+hasChildren = true
+    [[menu.footer]]
+    parent = "products"
+    name = "Cryptocommunity"
+    URL = "#"
+    weight = 1
+    [[menu.footer]]
+    parent = "products"
+    name = "ITG Indicator"
+    URL = "#"
+    weight = 2
+    [[menu.footer]]
+    parent = "products"
+    name = "STC"
+    URL = "#"
+    weight = 3
+[[menu.footer]]
+name = "Documentation"
+weight = 4 
+identifier = "documentation"
+hasChildren = true   
+    [[menu.footer]]
+    parent = "documentation"
+    name = "Terms and Conditions"
+    URL = "#"
+    weight = 1
+    [[menu.footer]]
+    parent = "documentation"
+    name = "Privacy policy"
+    URL = "#"
+    weight = 2
+    [[menu.footer]]
+    parent = "documentation"
+    name = "Cookie policy"
+    URL = "#"
+    weight = 3
+    [[menu.footer]]
+    parent = "documentation"
+    name = "Risk warnings"
+    URL = "#"
+    weight = 4
+[[menu.footer]]
+name = "For investors"
+weight = 5    
+identifier = "investors"
+hasChildren = true

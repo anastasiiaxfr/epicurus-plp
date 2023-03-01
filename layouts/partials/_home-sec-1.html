@@ -1,0 +1,46 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.homepage.section_solutions }}
+{{ with $data.homepage.section_solutions }}
+
+
+<section class="section section_1" id="solutions">
+    <div class="container text-center">
+
+        <h2>
+            {{ .title }}
+        </h2>
+        <div class="text__sub">
+            {{ .sub_title }}
+        </div>
+
+        <div class="card__wrap">
+            {{ range .items }}
+            <figure class="card">
+                <div class="card__icon">
+                    <svg class="icon">
+                        <use xlink:href="#{{ .icon }}"></use>
+                    </svg>
+                </div>
+                <figcaption class="card__content">
+                    <h4 class="card__title">
+                        {{ .title }}
+                    </h4>
+                    <p class="card__text">
+                        {{ .description }}
+                    </p>
+                </figcaption>
+                <div class="card__footer">
+                    <button class="card__label card__label--{{ .label_active }}">
+                        {{ .label }}
+                    </button>
+                </div>
+            </figure>
+            {{ end }}
+        </div>
+
+    </div>
+</section>
+
+{{ end }}
+{{ end }}

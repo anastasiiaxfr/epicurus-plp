@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Offers on itg - Главная</title>
+    <link>/cases/</link>
+    <description>Recent content in Offers on itg - Главная</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ua</language>
+    <lastBuildDate>Thu, 14 Nov 2019 13:39:07 +0600</lastBuildDate><atom:link href="/cases/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Amy Goldberg</title>
+      <link>/cases/case2/</link>
+      <pubDate>Thu, 14 Nov 2019 13:39:07 +0600</pubDate>
+      
+      <guid>/cases/case2/</guid>
+      <description>Faucibus. At penatibus ad cubilia risus senectus varius sociis suspendisse integer suspendisse turpis senectus pellentesque nibh.</description>
+    </item>
+    
+    <item>
+      <title>Amy Goldberg</title>
+      <link>/cases/case3/</link>
+      <pubDate>Thu, 14 Nov 2019 13:39:07 +0600</pubDate>
+      
+      <guid>/cases/case3/</guid>
+      <description>Faucibus. At penatibus ad cubilia risus senectus varius sociis suspendisse integer suspendisse turpis senectus pellentesque nibh.</description>
+    </item>
+    
+    <item>
+      <title>Jane Doe</title>
+      <link>/cases/jane-doe/</link>
+      <pubDate>Thu, 14 Nov 2019 07:39:07 +0000</pubDate>
+      
+      <guid>/cases/jane-doe/</guid>
+      <description>UA TEST Faucibus. At penatibus ad cubilia risus senectus varius sociis suspendisse integer suspendisse turpis senectus pellentesque nibh.</description>
+    </item>
+    
+    <item>
+      <title>John Doe</title>
+      <link>/cases/case1/</link>
+      <pubDate>Thu, 14 Nov 2019 13:39:07 +0600</pubDate>
+      
+      <guid>/cases/case1/</guid>
+      <description>UA TEST Faucibus. At penatibus ad cubilia risus senectus varius sociis suspendisse integer suspendisse turpis senectus pellentesque nibh.</description>
+    </item>
+    
+    <item>
+      <title>UA Amy Goldberg-(copy)</title>
+      <link>/cases/ua-amy-goldberg-copy/</link>
+      <pubDate>Thu, 14 Nov 2019 07:39:07 +0000</pubDate>
+      
+      <guid>/cases/ua-amy-goldberg-copy/</guid>
+      <description>UA Faucibus. At penatibus ad cubilia risus senectus varius sociis suspendisse integer suspendisse turpis senectus pellentesque nibh.</description>
+    </item>
+    
+  </channel>
+</rss>

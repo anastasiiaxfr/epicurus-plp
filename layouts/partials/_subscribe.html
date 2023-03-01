@@ -1,0 +1,32 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.homepage.section_subscribe.enable }}
+{{ with $data.homepage.section_subscribe }}
+
+<section class="section section_subscribe" id="subscribe">
+    <div class="container">
+
+       <figure class="subscribe">
+        <div class="subscribe__content">
+            <h3 class="subscribe__title">
+                {{ .title }}
+            </h3>
+            <p class="subscribe__text">
+                {{ .sub_title }}
+            </p>
+            {{ if .btn.enable }}
+            <a href="{{ .btn.link | safeURL }}" class="btn">
+                {{ .btn.label }}
+            </a>
+            {{ end }}
+        </div>
+        <div class="subscribe__img">
+            <img src="{{ `images/img2.jpg` | relURL }}" alt="ALT" width="206" height="263">
+            <img src="{{ `images/img1.jpg` | relURL }}" alt="ALT" width="206" height="263">
+        </div>
+       </figure>
+
+    </div>
+</section>
+{{ end }}
+{{ end }}

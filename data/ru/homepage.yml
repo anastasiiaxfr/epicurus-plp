@@ -1,0 +1,32 @@
+---
+hero:
+  enable: true
+  title: International Trade Group
+  title_sub: Инновационная, динамично развивающаяся консалтинговая компания, открывающая
+    перед инвесторами глобальные перспективы в мире  Web 3.0 технологий и геополитического
+    устройства мира финансов. Мы эксперты в достижении поставленных целей в бизнесе,
+    разработке Blockchain технологии, аудите цифровых активов и фундаментального анализа
+  bg_img: "/images/hero.jpg"
+  btn:
+    enable: true
+    label: Наши продукты
+    link: "#form"
+
+section_1:
+  enable: true
+  title: О компании
+
+
+section_2:
+  enable: true
+  title: Команда
+
+
+section_socials:
+  enable: true
+  title: Преимущества
+
+
+section_subscribe:
+  enable: false
+  title: Наши продукты

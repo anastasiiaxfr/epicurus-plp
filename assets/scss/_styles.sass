@@ -1,0 +1,374 @@
+body
+    +theme(dark)
+    background-image: url('../images/bg1.svg') 
+    background-repeat: no-repeat
+    background-position: top center
+    background-size: cover 
+
+.hero
+    &__wrap
+        position: relative   
+        height: 100vh
+        +flex(flex, center, center, wrap)
+        flex-direction: column
+    &__bg
+        z-index: -1
+        +ps(absolute, (t, 0), (b, 0), (r, 0), (l, 0))
+        display: flex
+        justify-content: center
+        margin: auto
+        img
+            position: absolute
+            &:last-child
+                top: auto
+                bottom: 0
+                right: auto
+                left: calc(50% - 402px)
+                max-width: 402px
+                width: 100%
+            &:first-child
+                top: 20%
+                left: 10%
+                right: 0
+                bottom: auto
+                margin: auto
+                width: 100px
+                transform: scale(2)
+    +maw($md)
+        padding-top: $gap40 + 30px
+        padding-bottom: $gap40 + 30px
+        &__wrap
+            height: auto
+    +maw($xs)
+        padding-top: $gap20 + 20px
+        padding-bottom: $gap20 + 20px
+           
+           
+.logo
+    +maw($xs)
+        img
+            +sz(80px, auto)
+            object-fit: contain               
+
+.socials
+    +flex(flex, center, center, nowrap)
+    padding: $gap40
+    +theme(dark3)
+    border: 2px solid transparent
+    border-radius: $brs
+    text-align: center
+    +ft(28, 32, 700)
+    opacity: 0.5
+    cursor: pointer
+    transition: $trs
+    &:hover, &:active, &:focus
+        opacity: 1
+        color: $white
+        svg
+            &:first-of-type
+                display: none
+            &:last-of-type
+                display: block
+    +maw($xs)
+        padding: 20px
+        +ft(20, 20, 700)
+    &--tk
+        &:hover, &:active, &:focus
+            box-shadow: $bxsd1
+    &--tm
+        &:hover, &:active, &:focus
+            border-color: $blue
+    &--ytb
+        &:hover, &:active, &:focus
+            border-color: $red
+    &--rd
+        &:hover, &:active, &:focus
+            box-shadow: $bxsd2
+    &--ln
+        &:hover, &:active, &:focus
+            border-color: $blue3
+    &--tw
+        &:hover, &:active, &:focus
+            border-color: $blue2
+
+    svg
+        +sz(40px, 40px)
+        margin-right: 18px
+        &, & > *
+            fill: red
+        &:last-of-type
+            display: none
+
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(auto-fill,minmax(413px,1fr))
+        gap: 20px    
+        margin-top: $gap120
+        margin-bottom: $gap120
+
+        +maw($sm)
+            margin-top: $gap120/2
+            margin-bottom: $gap120/2
+        +maw($xs)
+            grid-template-columns: 1fr
+    +maw($xs)
+        &__title
+            +ft(15, 15, 700)
+        
+
+.subscribe
+    display: grid
+    grid-template-columns: 1fr 1fr
+    margin-top: $gap120
+    margin-bottom: $gap120
+    padding: $gap40
+    align-items: center
+    +theme(dark3)
+    border-radius: $brs
+    color: $grey1
+    &__title
+        margin-bottom: 20px
+        +ft(24, 28, 700)
+    &__text
+        margin-bottom: 40px
+        +ft(16, 18, 400)
+    &__img
+        display: flex
+        justify-content: center
+        position: relative
+        height: 100%
+        img
+            +ps(absolute, (t, 0), (b, 0), (l, 0), (r, 0))
+            margin: auto
+            object-fit: contain
+            border-radius: $brs
+            &:first-of-type
+                transform: translateY(-60px) translateX(-50%)
+            &:last-of-type
+                transform: translateY(-40px) translateX(calc(50% + 20px))
+    +maw($md)
+        grid-template-columns: 1fr
+        margin-top: $gap120/2
+        margin-bottom: $gap120/2
+        text-align: center
+        &__img
+            height: 200px
+            margin-top: 25%
+            img
+                left: 0
+                right: 0
+                width: 50%
+                max-width: 250px
+                height: auto
+                
+                &:first-of-type
+                    transform: translateY(0) translateX(-50%)
+                &:last-of-type
+                    transform: translateY(0) translateX(calc(50% - 20px)) scale(1.2)
+    +maw($xs)
+        overflow: hidden
+        padding-bottom: 50%
+        text-align: center
+        &__text
+            +ft(15, 15*1.5, 400)
+        &__img
+            height: 100%
+            margin-bottom: -50%
+            margin-top: 50%
+            img
+                left: 5px
+            
+
+.card
+    position: relative
+    +flex(flex, initial, space-between, wrap)
+    flex-direction: column
+    margin-bottom: 0
+    padding: $gap20
+    +theme(dark3)
+    color: $grey1
+    border-radius: $brs
+    text-align: left
+    transition: $trs    
+    &::before
+        @extend %mask
+    &:hover::before
+        z-index: 0
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(auto-fit,minmax(320px,1fr))
+        grid-gap: 1.25rem  
+
+        margin-top: $gap40
+        margin-bottom: $gap120 
+    &__content
+        margin-top: $gap20
+        margin-bottom: $gap40
+    &__title
+        +ft(16, 18, 700)
+        margin-bottom: $gap20
+    &__text
+        +ft(16, 18, 400)
+    &__label
+        min-width: 110px
+        padding: 8px 16px
+        border: none
+        border-radius: $brs/2
+        background-color: $grey2
+        color: $grey1
+
+        text-align: center
+        text-transform: uppercase
+        +ft(16, 18, 700)
+        &--done
+            color: $green
+    &__icon
+        svg
+            +sz(40px, 40px)
+    +maw($sm)
+        &__wrap
+            margin-top: $gap120/2
+            margin-bottom: $gap120/2
+    +maw($xs)
+        &__wrap
+            grid-template-columns: 1fr
+        &__label
+            padding-top: 12px
+            padding-bottom: 12px
+            +ft(10, 10, 700)
+        &__text
+            +ft(14, 14*1.5, 400)
+
+#roadmap
+    position: relative
+    overflow: hidden
+.roadmap
+    position: relative
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    margin-top: 10%
+    margin-bottom: 5%
+    counter-reset: counter
+    &::after
+        content: ''
+        display: block
+        +sz(100%, 200px)
+        +ps(absolute, (t, 297px), (l, 0))
+        background: url('../images/roadmap_line.svg') no-repeat 50%/contain
+    &__bg
+        +ps(absolute, (t, 0), (l, 0))
+        +sz(100%, 100%)
+        img
+            +ps(absolute, (t, 0), (l, 0))
+            display: block
+            object-fit: contain
+            
+            &:first-child
+                left: 12%
+                top: 6%
+                max-width: 600px
+                width: 100%
+            &:nth-child(2)
+                right: 25%
+                left: auto
+                top: auto
+                bottom: 15%
+                transform: scale(1.5)
+            &:nth-child(3)
+                left: auto
+                right: 30%
+                top: 15%
+                transform: scale(1.5)
+            &:nth-child(4)
+                top: auto
+                bottom: 15%
+                left: 30%
+                transform: scale(1.5)
+
+
+    &__item 
+        position: relative
+        display: inline-flex
+        align-items: center
+        justify-content: flex-start
+        grid-row-start: 1
+        max-width: 305px
+        height: 293px
+        padding: 20px 40px
+        +theme(dark3)
+        border-radius: $brs
+        text-align: left
+        +ft(16, 24, 400)
+        overflow: hidden
+        &::before
+            counter-increment: counter
+            content: "Q " counter(counter)
+            +ps(absolute, (t, 0), (b, 0), (l, -150px), (r, auto))
+            margin: auto
+            +flex(flex, center, flex-start, nowrap)
+            font-weight: 600
+            font-size: 300px
+            line-height: 0.5
+            letter-spacing: -60px
+            white-space: nowrap
+            color: $grey3
+            opacity: 0.1
+        &::after
+            @extend %mask
+        &:hover::after
+            z-index: 0
+        &:nth-of-type(3)
+            grid-row-start: 1
+            grid-column-start: 3
+        &:nth-of-type(2), &:nth-of-type(4)
+            grid-row-start: 2
+            margin-top: 200px
+        &:nth-of-type(2)
+           grid-column-start: 2
+        &:nth-of-type(4)
+            grid-column-start: 4
+
+    +maw($md)
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        gap: 20px
+
+        margin-top: 80px
+        margin-bottom: 0px
+        &::after
+            height: 100px
+            top: calc(50% - 50px)
+            background-position: 50% 50%
+        &__bg
+            img:first-child
+                left: 0
+                right: 0
+                margin: auto
+        &__item 
+            max-width: calc(50% - 20px)
+            height: auto
+            padding: 40px 30px
+            +ft(14, 14*1.5, 400)
+            &:nth-of-type(2)
+                margin-top: 0
+            &:nth-of-type(3),
+            &:nth-of-type(4)
+                margin-top: 80px
+    +maw(640)
+        margin-top: 40px
+        margin-bottom: 20px
+        &::after
+            display: none
+        &__bg
+            display: none
+        &__item
+            max-width: 100%
+            height: auto
+            padding: 20px
+            +ft(14, 14*1.5, 400)
+            &:nth-of-type(3),
+            &:nth-of-type(4)
+                margin-top: 0
+
+           
