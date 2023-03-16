@@ -5,6 +5,66 @@ body
     background-position: top center
     background-size: cover 
 
+a
+    &:hover, &:focus, &:active
+        color: inherit
+
+.page
+    &__single
+        margin-top: 150px
+        margin-bottom: 150px
+
+        +maw($sm)
+            margin-top: 0px
+            margin-bottom: 50px
+        
+    &__sidebar
+        @extend .col-lg-3
+        position: relative
+        margin-bottom: 24px
+    &__content
+        @extend .col-lg-9
+       
+        iframe
+            width: 100%
+            border-radius: 16px
+            overflow: hidden
+
+
+    &__box
+        @extend .box
+  
+
+.toc
+    @extend .box
+    position: sticky
+    top: 15px
+    &__header
+        +flex(flex, center, space-between, nowrap)
+        cursor: pointer
+        +ft(18, 20, 400)
+
+        svg
+            margin-left: 15px
+            fill: $grey1
+            transform: rotate(180deg)
+            transition: $trs
+            &.active
+                transform: rotate(0deg)
+
+    &__body
+        display: none 
+
+        ol
+            margin: 20px 0
+            li
+                margin: 8px 0
+                a
+                    transition: $trs
+                    &:focus, &:active, &:hover
+                        text-decoration: underline
+
+
 .hero
     &__wrap
         position: relative   

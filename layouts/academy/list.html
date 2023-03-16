@@ -1,0 +1,63 @@
+{{ define "main" }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+<!-- BEGIN section -->
+{{- partial "header.html" . -}}
+
+<!-- END section -->
+
+<article class="page__single container">
+	<div class="row">
+		<aside class="page__sidebar">
+
+			<div class="toc">
+				<div class="toc__header">
+					Работа с API ключами
+					<svg class="icon" width="15" height="15">
+						<use xlink:href="#arr-up"></use>
+					</svg>
+
+				</div>
+				<div class="toc__body">
+					<ol>
+						<li>
+							<a href="#p1">
+								Что такое API ключи
+							</a>
+						</li>
+						<li>
+							<a href="#p2">
+								Как создать API ключи на Binance
+							</a>
+						</li>
+						<li>
+							<a href="#p3">
+								IP для чтения
+							</a>
+						</li>
+						<li>
+							<a href="#p4">
+								IP для торговли
+							</a>
+						</li>
+						<li>
+							<a href="#p5">
+								Видеоинструкция
+							</a>
+						</li>
+					</ol>
+				</div>
+			</div>
+
+
+		</aside>
+		<section class="page__content">
+			<div class="page__box">
+				{{ .Content }}
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/lfFOvQ7dneI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</div>
+		</section>
+	</div>
+</article>
+
+{{ end }}
