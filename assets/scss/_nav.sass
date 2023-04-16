@@ -1,10 +1,13 @@
 header
     width: 100%
+    position: relative
+    margin: 0
+
 .navbar
-    +ps(absolute, (t, 0), (l, 0))
+    //+ps(absolute, (t, 0), (l, 0))
     width: 100%
     padding-top: $gap40
-    padding-bottom: $gap40
+    //padding-bottom: $gap40
     &-menu
         +flex(flex, center, space-between, wrap)
         width: 100%
@@ -12,7 +15,8 @@ header
         width: 100%
     &-toggler
         padding: 0
-    &-toggler
+        &:hover, &:focus, &:active
+            box-shadow: none
         &-open, &-close 
             fill: $grey1
         &-close
@@ -38,6 +42,18 @@ header
         .lang-switcher
             button
                 width: 100%
+
+    +maw(460)
+        .logo img
+            +sz(60px, 60px)
+
+        #sign-in, #sign-up
+            padding: 0 5px
+            background: transparent
+            backdrop-filter: none
+        
+        .navbar-toggler
+            margin-left: 10px
         
     +maw($xs)
         position: relative
@@ -51,6 +67,9 @@ header
 .nav
     &-item
         margin-right: $gap40
+        &:last-of-type
+            margin-right: 0
+
     &-link
         color: $grey1    
         &:hover, &:active, &:focus

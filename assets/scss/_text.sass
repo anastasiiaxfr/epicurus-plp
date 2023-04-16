@@ -1,17 +1,17 @@
 h1
     margin-bottom: $gap20
-    +ft(48, 55, 400)
+    +ft(48, 72, 500, $ffHeading)
     +maw($sm)
-        +ft(34, 34*1.25, 400)
+        +ft(34, 34*1.25, 400, $ffHeading)
     +maw($xs)
-        +ft(28, 28*1.25, 400)
+        +ft(28, 28*1.25, 400, $ffHeading)
 h2
     margin-bottom: $gap20
-    +ft(48, 55, 400)
+    +ft(40, 60, 400, $ffHeading)
     +maw($sm)
-        +ft(30, 30*1.25, 400)
+        +ft(30, 30*1.25, 400, $ffHeading)
     +maw($xs)
-        +ft(25, 25*1.5, 400)
+        +ft(25, 25*1.5, 400, $ffHeading)
 
     .page__single &
         margin-bottom: 24px
@@ -26,9 +26,10 @@ p
 
 .text
     &__sub
-        margin-bottom: $gap40
-        +ft(16, 18, 400)
+        margin-bottom: $gap60
+        +ft(16, 19, 500)
         +maw($sm)
+            margin-bottom: 40px
             +ft(14, 14*1.75, 400)
         +maw($xs)
             +ft(14, 14*1.5, 400)

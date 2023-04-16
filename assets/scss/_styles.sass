@@ -1,6 +1,6 @@
 body
     +theme(dark)
-    background-image: url('../images/bg1.svg') 
+    background-image: url('../images/bg.svg') 
     background-repeat: no-repeat
     background-position: top center
     background-size: cover 
@@ -66,11 +66,20 @@ a
 
 
 .hero
+    margin: auto
+    
     &__wrap
         position: relative   
         height: 100vh
         +flex(flex, center, center, wrap)
         flex-direction: column
+        color: $white
+    
+    .text__sub
+        margin-top: 16px
+        margin-bottom: 40px
+        color: $grey4
+
     &__bg
         z-index: -1
         +ps(absolute, (t, 0), (b, 0), (r, 0), (l, 0))
@@ -117,7 +126,7 @@ a
     border: 2px solid transparent
     border-radius: $brs
     text-align: center
-    +ft(28, 32, 700)
+    +ft(28, 42, 600, $ffHeading)
     opacity: 0.5
     cursor: pointer
     transition: $trs
@@ -163,12 +172,7 @@ a
         display: grid
         grid-template-columns: repeat(auto-fill,minmax(413px,1fr))
         gap: 20px    
-        margin-top: $gap120
-        margin-bottom: $gap120
-
-        +maw($sm)
-            margin-top: $gap120/2
-            margin-bottom: $gap120/2
+  
         +maw($xs)
             grid-template-columns: 1fr
     +maw($xs)
@@ -177,6 +181,8 @@ a
         
 
 .subscribe
+    position: relative
+    z-index: 1
     display: grid
     grid-template-columns: 1fr 1fr
     margin-top: $gap120
@@ -184,60 +190,105 @@ a
     padding: $gap40
     align-items: center
     +theme(dark3)
-    border-radius: $brs
+    border-radius: 26px
     color: $grey1
+    &::after
+        content: ''
+        display: block
+        +ps(absolute, (t, 0), (l, 0))
+        z-index: -1
+        +sz(100%, 100%)
+        border-radius: 26px
+        background-image: url('../images/subscribe_bg_2.svg'), url('../images/subscribe_bg_1.svg')
+        background-repeat: no-repeat
+        overflow: hidden
+        opacity: 0.4
     &__title
         margin-bottom: 20px
-        +ft(24, 28, 700)
+        +ft(24, 36, 600, $ffHeading)
     &__text
         margin-bottom: 40px
-        +ft(16, 18, 400)
+        +ft(16, 20, 400, $ffText)
     &__img
         display: flex
         justify-content: center
         position: relative
         height: 100%
+        border-radius: 15px
         img
+            display: block
             +ps(absolute, (t, 0), (b, 0), (l, 0), (r, 0))
             margin: auto
             object-fit: contain
-            border-radius: $brs
+            border-radius: 18px
             &:first-of-type
                 transform: translateY(-60px) translateX(-50%)
+                z-index: 1
             &:last-of-type
-                transform: translateY(-40px) translateX(calc(50% + 20px))
-    +maw($md)
+                transform: translateY(40px) translateX(40px)
+        +maw(1400)
+            img
+                left: 0
+                right: auto
+                max-width: 30vmax   
+                &:first-of-type
+                    transform: translateY(-60px)
+                &:last-of-type
+                    transform: none
+                    left: auto
+                    right: 0
+                    top: auto
+                    bottom: -7vmax
+                    object-position: bottom
+
+    +maw(992)
         grid-template-columns: 1fr
         margin-top: $gap120/2
         margin-bottom: $gap120/2
         text-align: center
         &__img
+            max-width: 100%
             height: 200px
-            margin-top: 25%
+            margin-top: 60px
             img
+                max-width: 40vmax
                 left: 0
                 right: 0
-                width: 50%
-                max-width: 250px
-                height: auto
                 
                 &:first-of-type
-                    transform: translateY(0) translateX(-50%)
+                    transform: translateY(40px) 
+                    right: auto
                 &:last-of-type
-                    transform: translateY(0) translateX(calc(50% - 20px)) scale(1.2)
-    +maw($xs)
+                    transform: none
+                    bottom: -10vmax
+    +maw(772)
         overflow: hidden
-        padding-bottom: 50%
         text-align: center
+        &::after
+            display: none
         &__text
             +ft(15, 15*1.5, 400)
         &__img
-            height: 100%
-            margin-bottom: -50%
-            margin-top: 50%
+            margin: -20px auto -40px
+            max-width: 100%
+            width: 100%
             img
                 left: 5px
-            
+                &:first-of-type
+                    transform: none
+                    left: 0
+                    right: auto
+                    bottom: 0
+                    top: 0
+                    /* object-position: center */
+                    margin: 0
+                &:last-of-type
+                    transform: none
+                    right: 0
+                    bottom: 0
+                    top: 0
+                    object-position: bottom
+                    margin: 0     
 
 .card
     position: relative
@@ -431,4 +482,106 @@ a
             &:nth-of-type(4)
                 margin-top: 0
 
-           
+.section
+    &_socials
+        margin-top: $gap120
+        margin-bottom: $gap120
+
+        h2
+            margin-bottom: 40px
+
+        +maw($sm)
+            margin-top: $gap120/2
+            margin-bottom: $gap120/2
+    &_subscribe
+        margin: 200px auto 170px
+        +maw(992)
+            margin-top: 120px
+        +maw(768)
+            margin-top: 60px
+            margin-bottom: 60px
+
+.box
+    position: relative
+    z-index: 1
+    +flex(flex, flex-end, flex-start, nowrap)
+    margin: 0 auto
+    padding: 50% 35px 30px
+
+    text-align: left
+
+    border-radius: 21px
+    background-image: url(../images/card_bg.svg)
+    background-repeat: no-repeat
+    background-size: cover
+    box-shadow: 0px 0px 75.6px -21px #4818B4
+    overflow: hidden
+
+    &::after
+        content: ''
+        +ps(absolute, (t, 0), (l, 0))
+        +sz(100%, 100%)
+        z-index: -1
+        background-image: linear-gradient(180deg,transparent 0%, rgba(#0D0D0D, 1) 75%)
+
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(auto-fit,minmax(calc(50% - 20px), 1fr))
+        gap: 20px
+
+        +maw(778)
+            grid-template-columns: 1fr
+
+    &__title
+        margin-bottom: 8px
+        +ft(16, 25, 600, $ffHeading)
+        color: $white
+
+    &__text
+        +flex(flex, flex-start, space-between, nowrap)
+        +ft(12, 12*1.3, 400, $ffText)
+        color: $grey4
+
+        +maw(1200)
+            flex-wrap: wrap
+
+            & > div
+                margin-bottom: 20px
+
+    &__btn
+        position: relative
+        +flex(flex, center, center, nowrap)
+        align-self: flex-end
+        padding: 10px 35px
+        min-width: 150px
+        height: 35px
+
+        white-space: nowrap
+        +ft(15, 16, 600, $ffHeading)
+
+        border-radius: 10px
+        box-shadow: 0 1px 0 1px #AA30E3, 0 -1px 0 1px #4E00F9
+        color: $white
+
+        &:hover, &:focus, &:active
+            &:not( &[disabled="disabled"])
+                box-shadow: 0 1px 0 1px #4E00F9, 0 -1px 0 1px #AA30E3
+                color: $white
+
+        &[disabled="disabled"]
+            opacity: 0.4
+            box-shadow: 0 1px 0 1px #AA30E3, 0 -1px 0 1px #4E00F9
+            
+
+    &__icon
+        +ps(absolute, (t, 0), (l, 0), (r, 0))
+        z-index: -1
+        +sz(100%, 100%)
+        img
+            display: block
+            +ps(absolute, (t, 0), (l, 0), (r, 0))
+            margin: auto
+            +sz(100%, 100%)
+            //max-height: 50vmax
+            object-fit: contain
+            object-position: top
