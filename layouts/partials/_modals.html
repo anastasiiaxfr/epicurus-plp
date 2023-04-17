@@ -1,0 +1,293 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="modalSignIn"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h5 class="modal-title" id="exampleModalLabel">
+            Log in
+          </h5>
+          <div class="modal-subtitle">
+            Have no account yet?
+            <button
+              class="modal-link"
+              data-bs-toggle="modal"
+              data-bs-target="#modalSignUp"
+            >
+              Register
+            </button>
+            or
+            <button
+              class="modal-link"
+              data-bs-toggle="modal"
+              data-bs-target="#modalReset"
+            >
+              Reset
+            </button>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          class="modal-close"
+        >
+          <svg class="icon" width="30" height="30">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+      </div>
+      <form class="needs-validation" novalidate>
+        <div class="modal-body">
+          <div class="modal-row">
+            <label for="validationCustomUserEmail" class="form-label">
+              <span>Email</span>
+
+              <div class="invalid-feedback">
+                Format is wrong
+              </div>
+            </label>
+            <div class="input-group has-validation">
+              <input
+                type="email"
+                class="form-control"
+                id="validationCustomUserEmail"
+                placeholder="name@example.com"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="modal-row">
+            <label for="validationCustomUserPassword" class="form-label">
+              <span>Пароль</span>
+
+              <div class="invalid-feedback">
+                Password is wrong
+              </div>
+            </label>
+            <div class="input-group has-validation">
+              <input
+                type="password"
+                class="form-control"
+                id="validationCustomUserPassword"
+                minlength="5"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">
+            Log in
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="modalSignUp"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h5 class="modal-title" id="exampleModalLabel">
+            Регистрация
+          </h5>
+          <div class="modal-subtitle">
+            Уже имеете аккаунт?
+            <button
+              class="modal-link"
+              data-bs-toggle="modal"
+              data-bs-target="#modalSignIn"
+            >
+              Войти
+            </button>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          class="modal-close"
+        >
+          <svg class="icon" width="30" height="30">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+      </div>
+
+      <form class="needs-validation" novalidate>
+        <div class="modal-body">
+          <div class="modal-row">
+            <label for="validationCustomUserEmail" class="form-label">
+              <span>Email</span>
+
+              <div class="invalid-feedback">
+                Format is wrong
+              </div>
+            </label>
+            <div class="input-group has-validation">
+              <input
+                type="email"
+                class="form-control"
+                id="validationCustomUserEmail"
+                placeholder="name@example.com"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="modal-row">
+            <label for="validationCustomUserPassword" class="form-label">
+              <span>Пароль</span>
+
+              <div class="invalid-feedback">
+                Password is too short
+              </div>
+            </label>
+            <div class="input-group has-validation">
+              <input
+                type="password"
+                class="form-control"
+                id="validationCustomUserPassword"
+                minlength="5"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="modal-row">
+            <label for="validationCustomUserPasswordConfirm" class="form-label">
+              <span>Повторите пароль</span>
+
+              <div class="invalid-feedback">
+                Password doesn’t match
+              </div>
+            </label>
+            <div class="input-group has-validation">
+              <input
+                type="password"
+                class="form-control"
+                id="validationCustomUserPasswordConfirm"
+                minlength="5"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="modal-row">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="invalidCheck"
+                required
+              />
+              <label class="form-check-label" for="invalidCheck">
+                <span>
+                  Я согласен с
+                  <a href="#" traget="_blank">политикой приватности</a>
+                </span>
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">
+            Зарегестрироваться
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="modalReset"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+            <h5 class="modal-title" id="exampleModalLabel">
+                Restore the password
+            </h5>
+            <div class="modal-subtitle">
+              Have no account yet?
+              <button
+                class="modal-link"
+                data-bs-toggle="modal"
+                data-bs-target="#modalSignUp"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+  
+          <button
+            type="button"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+            class="modal-close"
+          >
+            <svg class="icon" width="30" height="30">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+      </div>
+      <form class="needs-validation" novalidate>
+      <div class="modal-body">
+        <div class="modal-row">
+            <label for="validationCustomUserEmail" class="form-label">
+              <span>Email</span>
+
+              <div class="invalid-feedback">
+                Format is wrong
+              </div>
+            </label>
+            <div class="input-group has-validation">
+              <input
+                type="email"
+                class="form-control"
+                id="validationCustomUserEmail"
+                placeholder="name@example.com"
+                required
+              />
+            </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">
+            Send to email
+        </button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
