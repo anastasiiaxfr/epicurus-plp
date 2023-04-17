@@ -89,7 +89,7 @@ logo_dark = "images/logo.svg"
 logo_w = "116"
 
 site_name = "epicurus"
-site_url = "epicurus.com"
+site_url = "https://itg-epicurus.netlify.app/"
 
 description = "An innovative platform for investors, people, enthusiasts"
 
@@ -152,11 +152,11 @@ icon_sm = "tk"
 
 [[params.social]]
 label = "rd"
-title = "Reddit"
+title = "Medium"
 link = "#"
-icon = "reddit" 
-icon_h = "reddit-h"
-icon_sm = "rd"
+icon = "medium" 
+icon_h = "medium-h"
+icon_sm = "md"
 soc = "false"
 
 [[params.social]]
