@@ -1,11 +1,16 @@
 h1
     margin-bottom: $gap20
     color: inherit
-    +ft(48, 72, 500, $ffHeading)
+    +ft(40, 40*1.2, 700, $ffHeading)
+    text-transform: uppercase
+    letter-spacing: 0.05em
     +maw($sm)
-        +ft(34, 34*1.25, 400, $ffHeading)
+        +ft(34, 34*1.25, 700, $ffHeading)
     +maw($xs)
-        +ft(28, 28*1.25, 400, $ffHeading)
+        +ft(28, 28*1.25, 700, $ffHeading)
+    @media only screen and (orientation: landscape) and (max-height: 360px)
+        font-size: 6.5vmin
+    
 h2
     margin-bottom: $gap20
     +ft(40, 60, 400, $ffHeading)
@@ -18,7 +23,9 @@ h2
         margin-bottom: 24px
         +ft(28, 32, 700)
         &:not(:first-child)
-            margin-top: 24px
+            margin-top: 40px
+        +maw($xs)
+            +ft(25, 25*1.5, 700, $ffHeading)
         
 p
     .page__single &

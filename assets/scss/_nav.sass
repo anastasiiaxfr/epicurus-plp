@@ -1,13 +1,14 @@
 header
+    +ps(absolute, (t, 0), (l, 0))
     width: 100%
-    position: relative
     margin: 0
 
+    @media only screen and (orientation: landscape)
+        position: relative
+
 .navbar
-    //+ps(absolute, (t, 0), (l, 0))
-    width: 100%
-    padding-top: $gap40
-    //padding-bottom: $gap40
+    +ps(absolute, (t, 0), (l, 0))
+    +sz(100%, 100px)
     &-menu
         +flex(flex, center, space-between, wrap)
         width: 100%
@@ -22,22 +23,12 @@ header
         &-close
             display: none
 
-                
+    +miw($lg)
+        height: 150px
+                 
     +maw($md)
         position: relative
-        padding-top: $gap20
-        padding-bottom: $gap20
-        background-color: rgba($black, 0.1)
-        backdrop-filter: blur(30px)
-        &-menu
-            padding-top: 8px
-            margin-top: 16px
-            border-top: 1px solid rgba($white, 0.1)
-        &-nav
-            +flex(inline-flex, center, center, wrap)
-            flex-direction: row
-            margin-left: auto
-            margin-right: 0
+        height: auto
         
         .lang-switcher
             button
@@ -48,7 +39,7 @@ header
             +sz(60px, 60px)
 
         #sign-in, #sign-up
-            padding: 0 5px
+          
             background: transparent
             backdrop-filter: none
         
@@ -57,8 +48,6 @@ header
         
     +maw($xs)
         position: relative
-        padding-top: $gap20
-        padding-bottom: $gap20
         &-toggler
             &-open, &-close 
                 +sz(25px, 25px)
@@ -84,82 +73,3 @@ header
             margin-right: 1em
             font-size: 10px
         
-.footer
-    +theme(dark3)
-    padding-top: 50px
-    padding-bottom: $gap40
-    &__btm
-        padding-bottom: 10px
-        padding-top: 60px
-        text-align: center 
-        +ft(12, 14, 400, $ffText)  
-    &__top
-        +flex(flex, flex-start, space-between, wrap)  
-        +maw($lg)
-            justify-content: center
-    &__nav
-        display: grid
-        grid-template-columns: repeat(auto-fill,minmax(20%,1fr))  
-        width: 70%
-        margin: 0 auto
-        margin-right: 15px
-        &-title
-            +ft(16, 18, 700)
-        ul
-            list-style-type: none
-            padding: 0
-        li 
-            a
-                display: block
-                +ft(14, 18, 400, $ffText)
-                padding: 7px 0
-            &:hover, &:focus, &:active
-                a
-                    color: inherit
-                    text-decoration: underline
-    +maw($lg)
-        &__nav
-            width: 80%
-    +maw($md)
-        &__nav
-            grid-template-columns: repeat(auto-fill,minmax(25%,1fr))
-        li a
-            +ft(12, 12*1.5, 400)
-    +maw($sm)
-        &__nav
-            grid-template-columns: repeat(auto-fill,minmax(30%,1fr))
-            gap: $gap20
-            width: 100%
-            margin-right: auto
-            margin-top: $gap40
-            margin-bottom: $gap40
-    +maw($xs)
-        li a
-            +ft(12, 12*1.5, 400)
-
-.soc
-    svg
-        fill: $grey1
-        opacity: 0.5
-        transition: $trs
-        +sz(25px, 25px)
-    &:hover, &:focus, &:active
-        svg
-            opacity: 1    
-    &__wrap
-        +flex(flex, center, space-between, wrap)
-        gap: 20px
-        width: 200px
-    +maw($lg)
-        &__wrap
-            width: 100%
-            justify-content: center
-    +maw($md)
-        &__wrap
-            margin-top: $gap20
-    +maw($xs)
-        &__wrap
-            margin-top: 0
-            gap: 15px
-        svg
-            +sz(20px, 20px)

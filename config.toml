@@ -1,7 +1,7 @@
 baseURL = "/"
 # canonifyURLs = true
-defaultContentLanguage = "en"
-disableLanguages = ["ua"]
+defaultContentLanguage = "ua"
+# disableLanguages = ["ua"]
 paginate = "6"
 relativeURLs = true
 summaryLength = "50"
@@ -57,19 +57,6 @@ weight = 1
 # type = "submit"
 
 
-[[menu.header]]
-URL = "#explore"
-name = "Explore"
-weight = 1
-[[menu.header]]
-URL = "#solutions"
-name = "Products"
-weight = 2
-[[menu.header]]
-URL = "#roadmap"
-name = "Roadmap"
-weight = 3
-
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 [sitemap]
@@ -89,14 +76,14 @@ logo_dark = "images/logo.svg"
 logo_w = "116"
 
 site_name = "epicurus"
-site_url = "https://itg-epicurus.netlify.app/"
+site_url = "#"
 
 description = "An innovative platform for investors, people, enthusiasts"
 
-[[params.plugins.js]]
-link = "plugins/js/jquery.min.js"
-[[params.plugins.js]]
-link = "plugins/js/bootstrap.bundle.min.js"
+# [[params.plugins.js]]
+# link = "plugins/js/jquery.min.js"
+# [[params.plugins.js]]
+# link = "plugins/js/bootstrap.bundle.min.js"
 
 
 [params.preloader]

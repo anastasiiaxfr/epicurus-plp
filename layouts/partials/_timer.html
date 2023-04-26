@@ -1,0 +1,10 @@
+<div class="timer" data-date="23-9-2023" data-time="12:00">
+  {{ range .timer }}
+  <div class="timer__item">
+    <div>
+      <span class="timer__value" id="{{ .id }}"></span>
+      <span class="timer__text"> {{ .title }} </span>
+    </div>
+  </div>
+  {{ end }}
+</div>

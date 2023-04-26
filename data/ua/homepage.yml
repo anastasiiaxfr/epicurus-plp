@@ -1,18 +1,18 @@
 ---
 hero:
   enable: true
-  title: Кто был первым?
+  title: Хто був першим?
   btns:
-    - label: Следить
+    - label: Підписатися
       link: "https://t.me/ITG_club"
-    - label: О нас
+    - label: Про нас
       link: "https://itg-main.netlify.app/"
   timer:
     - id: days
-      title: дней
+      title: днiв
     - id: hours
-      title: часов
+      title: годин
     - id: minutes
-      title: мин
+      title: мiн
     - id: seconds
       title: сек

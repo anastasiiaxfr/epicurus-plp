@@ -1,6 +1,6 @@
 html, body 
 	height: 100%
-	min-height: 100vh
+	//min-height: 100vh
 	font-family: $ffText
 	scroll-behavior: smooth
 
@@ -18,7 +18,7 @@ body
 
 
 *
-	user-select: none
+	//user-select: none
 	&::selection
 		background-color: $white
 
@@ -29,6 +29,9 @@ a
 	&:hover, &:focus
 		text-decoration: none
 		color: $black
+
+img
+    user-select: none
 
 button, a, input 
 	&:hover, &:active, &:focus
@@ -41,4 +44,5 @@ button, a, input
 		display: flex
 		flex-direction: column
 	&__wrapper
+		display: flex
 		flex: 1 0 auto
